@@ -1,0 +1,18 @@
+.container {
+    margin-left: auto; margin-right: auto;
+    padding-left: 15px; padding-right: 15px;
+    position: relative; overflow: hidden;
+    @media ($small) { width: 750px }
+    @media ($medium) { width: 970px }
+    @media ($large) { width: 1000px }
+}
+
+.floatfix {
+    clear: both;
+}
+
+.text-center-s {
+    @media (max-width: 991px) {
+        text-align: center !important;
+    }
+}

@@ -1,0 +1,74 @@
+html { 
+    direction: rtl;
+}
+
+body {
+    font-family: 'Droid Arabic Kufi' !important;
+}
+@import 'sass/helpers/variables';
+/*
+** Float fixed
+*/
+$floatLeft: right;
+$floatRight: left;
+/*
+** Text fixed
+*/
+$textLeft: right;
+$textRight: left;
+
+/********** header section ***************/
+.header {
+    .logo {
+        @media ($mobile) { float: $floatLeft; }
+        @media ($medium) { float: $floatLeft; text-align: $textLeft; }
+        h1, p { font-family: 'Droid Arabic Kufi'; line-height: 1.2; }
+    }
+    .icon-list { float: $floatRight; text-align: $textRight; }
+    .navbar {
+        @media ($medium) { float: $floatLeft; }
+        li { @media ($mobile) { a {text-align: $textLeft;} } }
+    }
+}
+
+/*
+** Services Section
+*/
+.services {
+    .service-box { @media ($medium) {
+            &:not(:last-of-type) { padding-right: 0; padding-left: 2% }
+            float: $floatLeft;
+        }
+        .service-title { i { padding-right: 0; padding-left: 10px; } }
+    }
+}
+
+/*
+** Start Footer
+*/
+.footer {
+    @media ($small) { text-align: $textLeft !important; }
+    .gallery { 
+        @media ($small) { float: $floatLeft; margin-right: 0; margin-left: 2%; }
+        .gallery-box {
+            img { float: $floatLeft; margin-right: 0; margin-left: 10px; }
+            p { float: $floatLeft; }
+        }
+    }
+    .info {
+        @media ($small) { float: $floatLeft; }
+        @media ($medium) { margin-right: 0; margin-left: 1%; }
+    }
+    .contact { @media ($medium) { float: $floatLeft; } }
+    .outer { 
+        .licence, .author { @media ($medium) { text-align: $textLeft;} }
+        .author { @media ($medium) {text-align: $textRight;} }
+    }
+}
+
+
+
+
+
+
+

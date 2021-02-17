@@ -1,0 +1,56 @@
+.header {
+    padding: 20px 0;
+    overflow: hidden; border-bottom: 2px solid #CCC;
+    @media ($mobile) { padding: 10px 0; background-color: $redColor }
+    .logo {
+        h1, p { line-height: 1.5 }
+        h1 { color: $greyColor; margin: 0; }
+        p { font-size: 18px; color: $secondGreyColor; margin: 0; }
+        @media ($mobile) { 
+            width: 70%; float: $floatLeft;
+            h1, p { line-height: 1.2; color: #FFF }
+        }
+        @media ($small) { width: 100%; float: none; text-align: center; }
+        @media ($medium) { 
+            width: 40%; float: $floatLeft; text-align: $textLeft;
+            h1, p { font-family: 'Copperplate Gothic Bold'; line-height: 1 } 
+        }
+    }
+    .icon-list {
+        width: 30%; float: $floatRight; text-align: $textRight;
+        color: #FFF; padding-top: 10px;
+        i { font-size: 40px; cursor: pointer}
+        @media ($mobile) { display: block }
+        @media ($small) { display: none }
+        &:after { content: ''; display: block; clear: both }
+    }
+    .navbar {
+        @include prefixer(border-radius, 10px);
+        overflow: hidden;
+        background-color: $redColor;
+        @media ($mobile) {
+            width: 100%; float: none; padding-top: 15px;
+            display: none; border-radius: 0;
+        }
+        @media ($small) { display: block !important; margin-top: 20px }
+        @media ($medium) {
+            width: 60%; float: $floatLeft;
+            margin-top: 0;
+        }
+        li {
+            display: inline-block; width: calc(20% - 4px);
+            a {
+                display: block; color: #FFF; padding: 20px 10px;
+                text: { decoration: none; align: center; }
+                &:hover { background-color: #E00; border-radius: 10px }
+            }
+            @media ($mobile) {
+                width: 100%;
+                a {
+                    text-align: $textLeft;
+                    &:hover { border-radius: 0 }
+                }
+            }
+        }
+    }
+}

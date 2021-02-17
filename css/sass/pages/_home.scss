@@ -1,0 +1,106 @@
+
+%global-p {
+    margin: 5px 0; line-height: 1.9;
+    font-size: 15px;
+    color: $greyColor;
+}
+%global-link {
+    color: $redColor;
+}
+%global-img {
+    display: block;
+    background-color: $greyColor; color: #FFF;
+    height: 250px; line-height: 250px; 
+    text-align: center;
+}
+
+/*
+** Slider Section
+*/
+.slider {
+    .container {
+        @media ($mobile) { padding: 0 }
+    }
+    blockquote {
+        font: {style: italic; size: 22px}
+        line-height: 2;
+        color: $greyColor;
+        margin: 40px; text-align: center;
+    }
+    img {
+        width: 100%; height: 400px;
+    }
+    .bullets {
+        text-align: center; margin: 5px 0;
+        li {
+            width: 15px; height: 15px;
+            margin: 2px; cursor: pointer;
+            background-color: #BBB;
+            border-radius: 50%; cursor: pointer;
+            display: inline-block;
+            border: 2px solid #BBB;
+            &.active { border: 2px solid #222 }
+        }
+    }
+}
+/*
+** Services Section
+*/
+.services {
+    overflow: hidden;
+    .service-box {
+        @media ($medium) {
+            &:not(:last-of-type) { padding-right: 2% }
+            width: ((100% - 2) / 3); float: $floatLeft;
+        }
+        .service-title {
+            margin: 15px 0; color: #444;
+            font-size: 25px;
+            i {
+                padding-right: 10px;
+                @media (max-width: 991px) { display: block; font-size: 120px; }
+            }
+        }
+        .service-desc { @extend %global-p; }
+        .service-link { @extend %global-link; }
+    }
+}
+/*
+** Player Section
+*/
+.our-player {
+    .container {
+        @media ($mobile) { padding: 0 }
+    }
+    .head-with-border {
+        padding: 0 15px;
+    }
+    .flex-container {
+        display: flex; justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .player-box {
+        @media ($mobile) { width: 100%; }
+        @media ($small) { width: 49%; }
+        @media ($medium) { width: 24%; }
+        margin: 20px 0;
+        .player-img {
+            @media ($mobile) { height: 350px; line-height: 350px; }
+            @extend %global-img; width: 100%; }
+        .player-desc { @extend %global-p }
+        .player-link { @extend %global-link }
+        .player-desc, .player-link {
+            @media ($mobile) { padding: 0 15px; }
+        }
+    }
+}
+/*
+** Lorem ipsiom Section
+*/
+.lorem-ipsoim {
+    .flex-lorem { display: flex; justify-content: space-between; }
+    .lorem-img { @extend %global-img; width: 33%; }
+}
+
+
+
